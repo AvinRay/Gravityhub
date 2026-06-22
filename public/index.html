@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Hub | Checkpoint 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
 
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Gravity<span class="accent">Hub</span></span>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Script Online</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="step-indicator">
+                    <div class="step active"><span>1</span></div>
+                    <div class="step-line"></div>
+                    <div class="step inactive"><span>2</span></div>
+                    <div class="step-line"></div>
+                    <div class="step inactive"><span>🔑</span></div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h1 class="title">Checkpoint <span class="accent">01</span></h1>
+                <p class="subtitle">Complete the link to automatically proceed. No button clicking — it verifies itself.</p>
+
+                <div class="info-box" id="error-box" style="display:none;">
+                    <span class="info-icon">❌</span>
+                    <span id="error-text">An error occurred.</span>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-icon">ℹ️</span>
+                    <span>After completing the link you will be redirected automatically.</span>
+                </div>
+
+                <button class="btn-primary" id="cp1-btn" onclick="startCheckpoint1()">
+                    <span class="btn-icon">🔗</span>
+                    Begin Checkpoint 1
+                </button>
+
+                <div class="loading-section" id="loading-section" style="display:none;">
+                    <div class="verify-box">
+                        <div class="verify-spinner"></div>
+                        <p class="verify-text">Opening checkpoint link...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
