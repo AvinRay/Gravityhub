@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Hub | Your Key</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Gravity<span class="accent">Hub</span></span>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Script Online</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="step-indicator">
+                    <div class="step completed"><span>✓</span></div>
+                    <div class="step-line active-line"></div>
+                    <div class="step completed"><span>✓</span></div>
+                    <div class="step-line active-line"></div>
+                    <div class="step active"><span>🔑</span></div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="key-success-icon">🔑</div>
+                <h1 class="title">Your <span class="accent">Key</span></h1>
+                <p class="subtitle">Both checkpoints verified by server. Copy your key below.</p>
+
+                <div class="key-container" id="key-container" style="display:none;">
+                    <div class="key-label">YOUR KEY</div>
+                    <div class="key-display">
+                        <span id="key-text">Loading...</span>
+                        <button class="copy-btn" onclick="copyKey()" id="copy-btn">Copy</button>
+                    </div>
+                    <div class="key-expiry" id="key-expiry">⏰ Loading expiry...</div>
+                </div>
+
+                <div class="loading-section" id="loading-section">
+                    <div class="verify-box">
+                        <div class="verify-spinner"></div>
+                        <p class="verify-text">Fetching your key from server...</p>
+                    </div>
+                </div>
+
+                <div class="info-box" id="error-box" style="display:none;">
+                    <span class="info-icon">❌</span>
+                    <span id="error-text">Could not load key.</span>
+                </div>
+
+                <div class="script-box" id="script-box" style="display:none;">
+                    <div class="script-label">SCRIPT LOADER</div>
+                    <code id="script-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/GravityHub/main/loader.lua"))()</code>
+                    <button class="copy-btn" onclick="copyScript()">Copy Script</button>
+                </div>
+
+                <a href="index.html" class="btn-ghost">🔄 Get a New Key</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

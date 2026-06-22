@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Hub | Checkpoint 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Gravity<span class="accent">Hub</span></span>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Script Online</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="step-indicator">
+                    <div class="step completed"><span>✓</span></div>
+                    <div class="step-line active-line"></div>
+                    <div class="step active"><span>2</span></div>
+                    <div class="step-line"></div>
+                    <div class="step inactive"><span>🔑</span></div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h1 class="title">Checkpoint <span class="accent">02</span></h1>
+                <p class="subtitle">One more step. Complete this link and your key will be generated automatically.</p>
+
+                <div class="info-box success-box">
+                    <span class="info-icon">✅</span>
+                    <span>Checkpoint 1 verified by server.</span>
+                </div>
+
+                <div class="info-box" id="error-box" style="display:none;">
+                    <span class="info-icon">❌</span>
+                    <span id="error-text">An error occurred.</span>
+                </div>
+
+                <button class="btn-primary" id="cp2-btn" onclick="startCheckpoint2()">
+                    <span class="btn-icon">🔗</span>
+                    Begin Checkpoint 2
+                </button>
+
+                <div class="loading-section" id="loading-section" style="display:none;">
+                    <div class="verify-box">
+                        <div class="verify-spinner"></div>
+                        <p class="verify-text">Opening checkpoint link...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
